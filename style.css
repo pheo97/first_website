@@ -102,7 +102,17 @@ body {
   z-index: 2;
 }
 
+.login-container {
+  width: 500px;
+  left: 4px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+}
+
 .register-container {
+  position: absolute;
+  right: -520px;
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -175,15 +185,15 @@ header {
   outline: none;
   background: rgba(255, 255, 255, 0.7);
   cursor: pointer;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.submit:hover{
+.submit:hover {
   background: rgba(255, 255, 255, 0.5);
-  box-shadow: 1px 5px 7px 1px rgba(0, 0,0, 0.2);
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
 }
 
-.two-col{
+.two-col {
   display: flex;
   justify-content: space-between;
   color: #fff;
@@ -191,16 +201,16 @@ header {
   margin-top: 10px;
 }
 
-.two-col .one{
+.two-col .one {
   display: flex;
   gap: 5px;
 }
 
-.two label a{
+.two label a {
   text-decoration: none;
-  color:#fff;
+  color: #fff;
 }
 
-.two label a:hover{
+.two label a:hover {
   text-decoration: underline;
 }
