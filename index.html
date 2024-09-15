@@ -15,20 +15,20 @@
         <div class="nav-logo">
           <p>LOGO .</p>
         </div>
-        <div class="nav-menu">
+        <div class="nav-menu" id="navMenu">
           <ul>
             <li><a href="#" class="link active">HOME</a></li>
-            <li><a href="#" class="link">ABOUT</a></li>
-            <li><a href="#" class="link">PROJECTS</a></li>
+            <li><a href="#" class="link">BAT VILLAINS</a></li>
+            <li><a href="#" class="link">BATFAMILY</a></li>
             <li><a href="#" class="link">CONTACT</a></li>
           </ul>
         </div>
         <div class="nav-button">
-          <button class="btn whiteBtn" id="loginBtn">Sign In</button>
-          <button class="btn" id="registerBtn">Register</button>
+          <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+          <button class="btn" id="registerBtn" onclick="register()">Register</button>
         </div>
         <div class="nav-menu-btn">
-          <i class="bx bx-menu"></i>
+          <i class="bx bx-menu" onclick="myMenuFunction()"></i>
         </div>
       </nav>
 
@@ -37,7 +37,7 @@
         <!--login-->
         <div class="login-container" id="login">
           <div class="top">
-            <span>Don't have an account? <a href="#" onclick="resgister()">Sign up</a></span>
+            <span>Don't have an account? <a href="#" onclick="register()">Sign up</a></span>
             <header>Login</header>
           </div>
             <div class="input-box">
@@ -103,5 +103,40 @@
         </div>
       </div>
     </div>
+    <script>
+      function myMenuFunction(){
+        var i = document.getElementById("navMenu")
+
+        if(i.className === "nav-menu"){
+          i.className += " responsive"
+        }else{
+          i.className = "nav-menu"
+        }
+      }
+    </script>
+    <script>
+      var a = document.getElementById("loginBtn");
+      var b = document.getElementById("registerBtn");
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+
+      function login(){
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+      }
+
+      function register(){
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn"
+        x.style.opapcity = 0;
+        y.style.opacity = 1;
+      }
+    </script>
   </body>
 </html>
